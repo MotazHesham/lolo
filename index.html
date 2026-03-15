@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Quiz ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background music (starts on page load; may need one click if browser blocks autoplay) -->
+  <audio id="bg-music" loop preload="auto" aria-label="Background music">
+    <source src="Edd_Sheeran_Perfect.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <main class="container">
+    <!-- Screen 1: Welcome -->
+    <section class="screen active" id="screen-1" data-screen="1">
+      <div class="card">
+        <h1>Hey LOLO ❤️</h1>
+        <p>I built this small website just for you.</p>
+        <p>But before you continue… you must pass a small test.</p>
+        <button type="button" class="btn btn-primary" data-next="2">Start the test 😏</button>
+      </div>
+    </section>
+
+    <!-- Screen 2: Question 1 -->
+    <section class="screen" id="screen-2" data-screen="2">
+      <div class="card">
+        <h2>Do you remember when we first started talking?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="yes">Of course I do</button>
+          <button type="button" class="btn btn-option" data-answer="maybe">Maybe… remind me</button>
+        </div>
+        <p class="feedback feedback-maybe" id="feedback-2" hidden>Wow… I see how it is 😒</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="3" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 3: Question 2 -->
+    <section class="screen" id="screen-3" data-screen="3">
+      <div class="card">
+        <h2>Be honest… who usually texts first?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="you">You</button>
+          <button type="button" class="btn btn-option" data-answer="me">Me</button>
+          <button type="button" class="btn btn-option" data-answer="both">Both of us</button>
+        </div>
+        <p class="feedback" id="feedback-3" hidden>Hmm… interesting answer 👀</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="4" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 4: Question 3 -->
+    <section class="screen" id="screen-4" data-screen="4">
+      <div class="card">
+        <h2>Who is more obsessed?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="you">You are obsessed with me</button>
+          <button type="button" class="btn btn-option" data-answer="me">I am obsessed with you</button>
+          <button type="button" class="btn btn-option" data-answer="both">We are equally obsessed</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-next" data-next="5" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 5: Question 4 -->
+    <section class="screen" id="screen-5" data-screen="5">
+      <div class="card">
+        <h2>What is my favorite thing about you?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="smile">My smile</button>
+          <button type="button" class="btn btn-option" data-answer="personality">My personality</button>
+          <button type="button" class="btn btn-option" data-answer="myeyes">My eyes</button>
+        </div>
+        <p class="feedback" id="feedback-5" hidden>Trick question… it's all of them.</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="6" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 6: Question 5 -->
+    <section class="screen" id="screen-6" data-screen="6">
+      <div class="card">
+        <h2>When did you realize you liked me?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="first">The first time we talked</button>
+          <button type="button" class="btn btn-option" data-answer="after">After some time</button>
+          <button type="button" class="btn btn-option" data-answer="never">I still don't like you</button>
+        </div>
+        <p class="feedback feedback-liar" id="feedback-6" hidden>Liar detected 🚨</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="7" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 7: Question 6 -->
+    <section class="screen" id="screen-7" data-screen="7">
+      <div class="card">
+        <h2>How much do you miss me when we're apart?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="alot">A lot ❤️</button>
+          <button type="button" class="btn btn-option" data-answer="dreams">I don't… I see you in my dreams</button>
+          <button type="button" class="btn btn-option" data-answer="who">Who are you again?</button>
+          <button type="button" class="btn btn-option" data-answer="phone">So much my phone dies from texting you</button>
+        </div>
+        <p class="feedback feedback-maybe" id="feedback-7" hidden>Wrong answer. Try again. 😤</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="8" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 8: Question 7 -->
+    <section class="screen" id="screen-8" data-screen="8">
+      <div class="card">
+        <h2>What's the best gift I've ever given you?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="time">Your time</button>
+          <button type="button" class="btn btn-option" data-answer="quiz">This quiz 😏</button>
+          <button type="button" class="btn btn-option" data-answer="forgot">I forgot…</button>
+          <button type="button" class="btn btn-option" data-answer="everything">Everything</button>
+        </div>
+        <p class="feedback feedback-maybe" id="feedback-8" hidden>How dare you 😒</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="9" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 9: Question 8 -->
+    <section class="screen" id="screen-9" data-screen="9">
+      <div class="card">
+        <h2>Where do you see us in 10 years?</h2>
+        <div class="options">
+          <button type="button" class="btn btn-option" data-answer="together">Still together, happy</button>
+          <button type="button" class="btn btn-option" data-answer="beach">On a beach somewhere</button>
+          <button type="button" class="btn btn-option" data-answer="arguing">Arguing about the same things</button>
+          <button type="button" class="btn btn-option" data-answer="glasses">I can't see that far</button>
+        </div>
+        <p class="feedback" id="feedback-9" hidden>Get glasses then 👀</p>
+        <button type="button" class="btn btn-primary btn-next" data-next="10" hidden>Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 10: Suspense -->
+    <section class="screen" id="screen-10" data-screen="10">
+      <div class="card">
+        <p class="suspense-text">Okay… you survived the test.</p>
+        <p class="suspense-text">But now comes the final question.</p>
+        <button type="button" class="btn btn-primary" data-next="11">Ask the final question</button>
+      </div>
+    </section>
+
+    <!-- Screen 11: Final Question -->
+    <section class="screen" id="screen-11" data-screen="11">
+      <div class="card card-final">
+        <h2 class="final-question">Do you love me? ❤️</h2>
+        <div class="final-buttons" id="final-buttons">
+          <button type="button" class="btn btn-no" id="btn-no">NO 😶</button>
+          <button type="button" class="btn btn-yes" id="btn-yes">YES ❤️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 12: YES response -->
+    <section class="screen" id="screen-12" data-screen="12">
+      <div class="card">
+        <p>I knew it 😌</p>
+        <p>But I just wanted to hear you say it again.</p>
+        <button type="button" class="btn btn-primary" data-next="13">One more thing</button>
+      </div>
+    </section>
+
+    <!-- Screen 13: Final / Ending -->
+    <section class="screen" id="screen-13" data-screen="13">
+      <div class="card card-ending">
+        <p>I'm really lucky to have you ❤️</p>
+        <h1 class="ending-title">I love you, LOLO</h1>
+        <div class="floating-hearts" aria-hidden="true"></div>
+        <button type="button" class="btn btn-primary btn-gallery" data-next="14">Our photos ❤️</button>
+      </div>
+    </section>
+
+    <!-- Screen 14: Gallery -->
+    <section class="screen" id="screen-14" data-screen="14">
+      <div class="card card-gallery">
+        <h2 class="gallery-title">Our memories</h2>
+        <p class="gallery-subtitle">Every moment with you is my favorite</p>
+        <div class="gallery-grid" id="gallery-grid"></div>
+        <p class="gallery-hint">Click a photo to see it full size</p>
+      </div>
+      <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Photo view" hidden>
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="Photo">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- rrweb for session recording (mouse, clicks, scroll, interactions) -->
+  <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
